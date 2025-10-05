@@ -1,0 +1,29 @@
+<div class="auth-container card shadow-lg p-4 mx-auto mt-2">
+  <h3 class="text-center mb-4 text-success fw-semibold">Regisztráció</h3>
+  <div id="messageBox"></div>
+
+  <form>
+    <div class="mb-2">
+      <label for="nameField" class="form-label">Név</label>
+      <input type="text" class="form-control" id="nameField" placeholder="Teljes név">
+    </div>
+
+    <div class="mb-2">
+      <label for="emailField" class="form-label">Email cím</label>
+      <input type="email" class="form-control" id="emailField" placeholder="pl. valaki@email.hu">
+    </div>
+
+    <div class="mb-2">
+      <label for="passwordField" class="form-label">Jelszó</label>
+      <input type="password" class="form-control" id="passwordField" placeholder="••••••••">
+    </div>
+
+    <div class="mb-2">
+      <label for="confirmPasswordField" class="form-label">Jelszó megerősítése</label>
+      <input type="password" class="form-control" id="confirmPasswordField" placeholder="••••••••">
+    </div>
+
+    <button class="btn btn-success w-100 mt-3" id="regBtn" onclick="registration()">Regisztráció</button>
+    <p class="text-center mt-3">Már van fiókod? <a href="#" onclick="render('login')">Jelentkezz be!</a></p>
+  </form>
+</div>

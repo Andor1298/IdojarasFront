@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időjárás Applikáció</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/idojaras.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="shadow-sm rounded p-4 mb-4 text-center bg-white">
+            <h1 id="appTitle" class="fw-bold text-primary"></h1>
+            <span id="themeSelector">
+                <i class="bi bi-sun-fill hide" id="lightmodeBtn"></i>
+                <i class="bi bi-moon-fill" id="darkmodeBtn"></i>
+            </span>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-light rounded shadow-sm mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-semibold" href="#">Menü</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto" id="mainMenu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('login')">Belépés</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('register')">Regisztráció</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav" id="userMenu" style="display: none;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('main')">Időjárásadatok</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('statistics')">Előrejelzés</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('calendar')">Naptár</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="render('profile')">Profilom</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger fw-semibold" id="kilepesBtn" href="#" onclick="logout()">Kilépés</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <main class="app-main p-4 rounded shadow-sm bg-white">
+            <!-- A login és register formok ide kerülnek -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer mt-3 py-3 bg-light rounded shadow-sm">
+            <p id="company" style="margin-right: 10px;"></p> 
+            <p id="author" class="text-muted"></p>
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/hu.global.min.js"></script>
+
+    <!-- Controllers -->
+    <script src="./controllers/messageCtrl.js"></script>
+    <script src="./controllers/userCtrl.js"></script>
+    <script src="./controllers/idojarasCtrl.js"></script>
+    <script src="./controllers/statistics.js"></script>
+    <script src="./controllers/calendar.js"></script>
+
+</body>
+</html>

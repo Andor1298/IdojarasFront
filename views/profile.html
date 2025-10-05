@@ -1,0 +1,48 @@
+<h3>Profil kezelése</h3>
+<hr>
+<div id="messageBox"></div>
+
+<div class="row">
+    <div class="col-12 col-l-6">
+        <h5>Alapadatok</h5>
+
+        <!--TODO::-->
+
+        <div class="mb-3">
+            <label for="nameField" class="form-label">Név</label>
+            <input type="text" class="form-control" id="nameField">
+        </div>
+
+        <div class="mb-3">
+            <label for="emailField" class="form-label">Email cím</label>
+            <input type="email" class="form-control" id="emailField">
+        </div>
+
+        <button class="btn btn-primary" id="modifyProfileBtn" onclick="updateProfile()">Módosítás</button>
+    </div>
+
+    <div class="col-12 col-l-6">
+        <h5 class="mt-3 mb-3">Jelszó módosítás</h5>
+
+        
+
+        <div class="mb-3">
+            <div class="mb-3">
+                <label for="passwordField" class="form-label">Jelenlegi jelszó</label>
+                <input type="password" class="form-control" id="passwordField">
+            </div>
+            <label for="passwordField" class="form-label">Új jelszó</label>
+            <input type="password" class="form-control" id="newPasswordField">
+        </div>
+
+        <div class="mb-3">
+            <label for="passwordField" class="form-label">Új jelszó megerősítése</label>
+            <input type="password" class="form-control" id="newPasswordConfirmField">
+        </div>
+
+        
+
+        <button class="btn btn-primary" id="modifyPassBtn" onclick="updatePassword()">Módosítás</button>
+    </div>
+
+</div>

@@ -1,0 +1,55 @@
+<h3>Időjárásadatok kezelése</h3>
+<hr>
+
+<div id="messageBox"></div>
+
+<!-- űrlap -->
+<div class="row">
+    <div class="mb-3 col-12 col-lg-4">
+        <label for="dateField" class="form-label">Dátum</label>
+        <input type="date" class="form-control" id="dateField">
+    </div>
+    <div class="mb-3 col-12 col-lg-2">
+        <label for="minFokField" class="form-label">Min °C</label>
+        <input type="number" min="-50" max="50" class="form-control" id="minFokField" placeholder="pl. -2">
+    </div>
+    
+    <div class="mb-3 col-12 col-lg-2">
+        <label for="maxFokField" class="form-label">Max °C</label>
+        <input type="number" min="-50" max="50" class="form-control" id="maxFokField" placeholder="pl. 35">
+    </div>
+    <div class="mb-3 col-12 col-lg-4">
+        <label for="idojarasField" class="form-label">Időjárás</label>
+        <select class="form-control" id="idojarasField">
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+    </div>
+    
+    
+    <div class="mb-3 col-12 col-lg-4">
+        <button class="btn btn-primary mb-3" id="addBtn" onclick="add()">Hozzáadás</button>
+        <button class="btn btn-warning mb-3 hide" id="updateBtn" style="display: none;" onclick="update()">Módosítás</button>
+        <button class="btn btn-danger mb-3 hide" id="delBtn" style="display: none;" onclick="del()">Törlés</button>
+        <button class="btn btn-secondary mb-3 hide" id="cancelBtn" onclick="cancel()">Mégsem</button>
+
+    </div>
+
+</div>
+
+<!--Adatok-->
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-start">Dátum</th>
+            <th class="text-end">Időjárás adat</th>
+            <th class="text-end">Műveletek</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Lépés adatok dinamikusan kitöltve -->
+    </tbody>
+</table>
